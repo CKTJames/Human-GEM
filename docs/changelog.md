@@ -30,3 +30,9 @@ On a compute node, run the following:
 memote report snapshot --filename "base_report.html" Human-GEM/model/Human-GEM.xml
 ```
 
+## fix_stoichiometry ef4f2f8 23.10.25
+
+Used script mod_MAR12372.m to modify Human-GEM in line with issue #837 and #813. 
+Saved modified model as Human-GEM_mod.mat
+
+Next step is to run memote to check if stoichiometry is fixed here
