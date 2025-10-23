@@ -1,8 +1,8 @@
 #!/bin/bash -l
 
-#SBATCH --job-name=memote
-#SBATCH --output=/scratch/prj/cmm_ipsc_transcriptomics/scratch_tmp/Plasmax_GEM/memote_output.log
-#SBATCH --error=/scratch/prj/cmm_ipsc_transcriptomics/scratch_tmp/Plasmax_GEM/memote_error.log
+#SBATCH --job-name=memote_2
+#SBATCH --output=/scratch/prj/cmm_ipsc_transcriptomics/scratch_tmp/Plasmax_GEM/Human-GEM/memote_output.log
+#SBATCH --error=/scratch/prj/cmm_ipsc_transcriptomics/scratch_tmp/Plasmax_GEM/Human-GEM/memote_error.log
 #SBATCH --partition=cpu
 #SBATCH --ntasks=1
 #SBATCH --mem=1000G
@@ -20,5 +20,5 @@ eval "$(conda shell.bash hook)"
 conda activate /scratch/prj/cmm_ipsc_transcriptomics/scratch_tmp/Plasmax_GEM/envs/memote_env
 
 #run script
-memote report snapshot --filename "base_report.html" Human-GEM/model/Human-GEM.xml
+memote report snapshot --filename "post-MAR12372_report.html" Human-GEM/model/Human-GEM_mod.xml
 echo "Job completed!"
