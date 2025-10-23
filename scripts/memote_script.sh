@@ -20,5 +20,5 @@ eval "$(conda shell.bash hook)"
 conda activate /scratch/prj/cmm_ipsc_transcriptomics/scratch_tmp/Plasmax_GEM/envs/memote_env
 
 #run script
-memote report snapshot --filename "post-MAR12372_report.html" Human-GEM/model/Human-GEM_mod.xml
+memote report snapshot --filename "post-MAR12372_report.html" model/Human-GEM_mod.xml
 echo "Job completed!"
