@@ -14,8 +14,8 @@ ihuman.metNames(metsIdx, :)
 FAD = 'MAM01802x';
 FADH = 'MAM01803x';
 
-FADIdx = ihuman.mets(FAD);
-FADHIdx = ihuman.mets(FADH);
+FADIdx = strcmp(ihuman.mets, FAD);
+FADHIdx = strcmp(ihuman.mets, FADH);
 
 ihuman.S(FADIdx, rxnIdx)
 ihuman.S(FADHIdx, rxnIdx)
@@ -26,6 +26,6 @@ ihuman.S(FADHIdx, rxnIdx) = 0;
 metsIdx2 = find(any(ihuman.S(:, rxnIdx) ~= 0, 2));
 ihuman.metNames(metsIdx2, :)
 
-save(ihuman, 'Human-GEM_mod.mat')
+save('Human-GEM_mod.mat', 'ihuman')
 
 
